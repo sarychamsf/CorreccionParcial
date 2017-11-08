@@ -46,7 +46,7 @@ public class EmpresaC extends HttpServlet {
         int NIT = Integer.parseInt(request.getParameter("NIT"));
         String direccion = request.getParameter("direccion");
         EmpresaClienteDAO e = new EmpresaClienteDAO();
-        ArrayList empresas = new ArrayList();
+        ArrayList<EmpresaCliente> empresas = new ArrayList<>();
         try {
             empresas = e.getAllEmpresas();
         } catch (SQLException ex) {

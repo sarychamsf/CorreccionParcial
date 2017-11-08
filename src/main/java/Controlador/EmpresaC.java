@@ -20,7 +20,7 @@ public class EmpresaC extends HttpServlet {
             throws ServletException, IOException {
         String action = request.getParameter("action");
         EmpresaClienteDAO e = new EmpresaClienteDAO();
-        ArrayList empresas = new ArrayList();
+        ArrayList<EmpresaCliente> empresas = new ArrayList<>();
         try {
             empresas = e.getAllEmpresas();
         } catch (SQLException ex) {

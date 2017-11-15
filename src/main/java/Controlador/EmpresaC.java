@@ -2,7 +2,6 @@ package Controlador;
 
 import dao.EmpresaClienteDAO;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;

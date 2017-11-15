@@ -14,12 +14,19 @@ CREATE TABLE funciones (
   PRIMARY KEY (idUsuario, idServicio)
 )
 
+CREATE TABLE prioridad (
+  idPrioridad int PRIMARY KEY NOT NULL,
+  nombrePrioridad varchar(30) NOT NULL
+) 
+
 CREATE TABLE mensaje (
   idU1 int NOT NULL,
   idU2 int NOT NULL,
   Asunto varchar(30) NOT NULL,
   Texto varchar(100) NOT NULL,
-  PRIMARY KEY (idU1, idU2)
+  idPrioridad int NOT NULL,
+  PRIMARY KEY (idU1, idU2),
+  FOREIGN KEY (idPrioridad) REFERENCES prioridad(idPrioridad)
 )
 
 CREATE TABLE servicio (

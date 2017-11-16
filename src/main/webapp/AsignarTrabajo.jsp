@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -31,13 +32,24 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-xs-center">
 
-                    <h2 class="tm-section-title">ERROR EN EL INICIO DE SESIÓN</h2>
+                    <h2 class="tm-section-title">Asignar Trabajo</h2>
                     <br><br>
-                    
-                    <a class="btn tm-bordered-btn pull-xs-center" href="menu.html" role="button">Volver</a>
                 </div>
 
-                
+                <form align="center" action="" method="POST" class="tm-contact-form">                                
+                    <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 tm-form-group-left">
+                        <label align="center" for="usuario">Usuario (supervisor)</label>
+                        <input type="text" name="nombreE" maxlength="30" class="form-control" placeholder="máx. 30"  required/>
+                        <br>
+                        <label align="center" for="password">Password</label>
+                        <input type="password" name="password" maxlength="30" class="form-control" placeholder="máx. 30"  required/>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn tm-bordered-btn pull-xs-center">Iniciar Sesión</button>
+                        <a class="btn tm-bordered-btn pull-xs-center" href="menu.html" role="button">Volver</a>
+                    </div>   
+
+                </form>   
 
             </section>
 

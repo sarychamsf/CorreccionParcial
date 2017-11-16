@@ -78,4 +78,23 @@ public class TrabajadorDAO {
         }
         return t;
     }
+
+    public Trabajador validar(Trabajador usuario) throws SQLException {
+        String consulta = "SELECT * FROM USUARIO WHERE USUARIO=? AND PASS=?";
+        PreparedStatement preparedStatement = connection.prepareStatement(consulta);
+        preparedStatement.setString(1, usuario.getUsuarioT());
+        preparedStatement.setString(2, usuario.getPasswordT());
+        ResultSet rs = preparedStatement.executeQuery();
+        if (rs.next()) {
+            String login = rs.getString("usuario");
+            String pass = rs.getString("pass");
+            Trabajador sesion = new Trabajador();
+            sesion.setUsuarioT(login);
+            sesion.setPasswordT(pass);
+            return sesion;
+        } else {
+            return null;
+        }
+    }
+
 }
